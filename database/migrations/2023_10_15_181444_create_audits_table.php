@@ -18,6 +18,7 @@ return new class extends Migration
             $table->integer('price_gross', unsigned: true)->default(0); // bruttó ár
             $table->integer('price_net', unsigned: true)->default(0); // nettó ár
             $table->foreignId('user_id')->constrained('users'); // felhasználó
+            $table->json('properties')->nullable(); // tul: note, ...
             $table->timestamps();
         });
     }

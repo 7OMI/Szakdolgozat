@@ -1,0 +1,26 @@
+* {
+	box-sizing: border-box;
+	/*font-family: Ubuntu;
+	font-size: 15px;*/
+}
+
+/* Kijelölés tiltása */
+*:not(input):not(textarea) {
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+*:not(input):not(textarea)::-moz-selection { background-color: rgba(0,0,0,0); }
+*:not(input):not(textarea)::selection { background-color: rgba(0,0,0,0); }
+
+
+
+html, body {
+	margin: 0; padding: 0;
+	font-family: Ubuntu;
+	font-size: 15px;
+}
+body {
+	background: #F2F2F2 url('/images/noise.png');
+}

@@ -1,0 +1,14 @@
+@font-face {
+    font-family: 'DroidSans';
+    src: url('DroidSansMono-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Ubuntu';
+    src: url('/fonts/ubuntu/ubuntu-r-webfont.woff2') format('woff2'),
+         url('/fonts/ubuntu/ubuntu-r-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}

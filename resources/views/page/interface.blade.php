@@ -7,5 +7,6 @@
 @section('content')
 
   TARTALOM
+  <a href="/logout">kilépés</a>
 
 @endsection

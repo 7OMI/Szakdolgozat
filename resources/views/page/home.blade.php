@@ -16,9 +16,15 @@
         </svg>
       </div>
 
-      <span><input class="input" name="name" type="text" placeholder="Felhasználónév"></span>
-      <span><input class="input" name="pass" type="password" placeholder="Jelszó"></span>
-      {{-- echo button('sign-in', 'Belépés', '#login', '{"type":"right"}'); --}}
+      <span><input class="input" name="email" type="text" placeholder="E-mail cím"></span>
+      <span><input class="input" name="password" type="password" placeholder="Jelszó"></span>
+
+      @if($errors->any())
+        <div style="padding: 15px; color: red;">
+          {!! implode('', $errors->all('<div>:message</div>')) !!}
+        </div>
+      @endif
+
       @include('component.button', ['data' => ['sign-in', 'Belépés', '#login', '{"type":"right"}']])
 
     </form>

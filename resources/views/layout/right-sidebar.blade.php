@@ -1,10 +1,10 @@
 @include('section.header')
 
-<main class="">
+<main class="frameMain">
   @yield('content')
 </main>
 
-<aside class="">
+<aside class="frameList">
   @yield('sidebar')
 </aside>
 

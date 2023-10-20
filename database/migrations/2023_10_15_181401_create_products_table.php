@@ -14,9 +14,9 @@ return new class extends Migration
         Schema::create('products', function (Blueprint $table) {
             $table->id();
             $table->string('barcode', 50); // vonalkód
-            $table->string('name', 250); // termék neve
-            $table->foreignId('brand_id')->constrained('brands'); // márka
-            $table->foreignId('manufacturer_id')->constrained('companies'); // gyártó
+            $table->string('name', 250)->nullable(); // termék neve
+            $table->foreignId('brand_id')->nullable()->constrained('brands'); // márka
+            $table->foreignId('manufacturer_id')->nullable()->constrained('companies'); // gyártó
             $table->json('properties')->nullable(); // tul: original_name, sku, note
             $table->timestamps();
         });

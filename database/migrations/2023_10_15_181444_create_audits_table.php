@@ -14,6 +14,7 @@ return new class extends Migration
         Schema::create('audits', function (Blueprint $table) {
             $table->id();
             $table->foreignId('product_id')->constrained('products'); // termék
+            $table->foreignId('distributor_id')->nullable()->constrained('companies'); // forgalmazó
             $table->integer('quantity')->default(1); // darabszám
             $table->integer('price_gross', unsigned: true)->default(0); // bruttó ár
             $table->integer('price_net', unsigned: true)->default(0); // nettó ár

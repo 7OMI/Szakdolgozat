@@ -1,11 +1,20 @@
 @include('section.header')
 
-<main class="frameMain">
-  @yield('content')
-</main>
+<div class="frameContainer">
 
-<aside class="frameList">
-  @yield('sidebar')
-</aside>
+  <div class="topMenu">
+    @include('component.menu-top')
+  </div>
+
+  <main class="frameMain">
+    @yield('content')
+    @include('component.menu-main')
+  </main>
+
+  <aside class="frameList frameHide">
+    @yield('sidebar')
+  </aside>
+
+</div>
 
 @include('section.footer')

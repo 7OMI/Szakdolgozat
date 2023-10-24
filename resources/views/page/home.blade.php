@@ -7,7 +7,7 @@
       @csrf
 
       <div class="logo">
-        <svg width="380" height="100" style="background:rgba(0,0,255,0.1);">
+        <svg width="380" height="100" style="background:rgba(110,158,219,0.24);">
           <text x="0" y="55" transform="translate(100)" font-family="Ubuntu">
             <tspan x="92" text-anchor="middle" font-size="45">Leltárkezelő</tspan>
             <tspan x="140" text-anchor="right" font-size="28" dy="25" style="font-style:italic;">&nbsp;</tspan>
@@ -25,7 +25,7 @@
         </div>
       @endif
 
-      @include('component.button', ['data' => ['sign-in', 'Belépés', '#login', '{"type":"right"}']])
+      <button type="submit" class="r">Belépés <i class="fa fa-sign-in"></i></button>
 
     </form>
   </div>

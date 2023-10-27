@@ -1,0 +1,200 @@
+
+  table#clist tr th {
+  	text-align: left;
+  }
+
+  table#clist tr.zz th {
+  	height: 25px;
+  }
+
+  table#clist tr.zz th > span, tr.bg th > span {
+    position: absolute; top: 60px;
+    display: block;
+    width: inherit; height: 50px;
+    line-height: 50px;
+    z-index: 30;
+    padding-right: 4%;
+  }
+  table#clist tr.zz th:nth-child(2) > span { padding-right: 2%; }
+  table#clist tr.zz th:nth-child(3) > span { padding-right: 1.5%; }
+  table#clist tr.zz th:nth-child(4) > span { padding-right: 4%; }
+
+
+  table#clist tr.bg th > span {
+    height: 70px;
+    margin: -20px 0 0 0;
+    background: #F2F2F2 url('/images/noise.png');
+    left: 5px; right: 20px;
+    z-index: 29;
+  }
+  table#clist {
+    border-spacing: 0px 5px;
+    border-collapse: separate;
+    table-layout: fixed;
+    width: 100%;
+  }
+
+  table#clist tbody tr td {
+    padding: 5px;
+  }
+  table#clist tbody tr td:last-child {
+    width: 130px;
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+  table#clist tbody tr td {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  table#clist tbody tr th {
+    overflow: hidden;
+    white-space: nowrap;
+  }
+
+  /* keresés input */
+  table#clist tr.zz th > span > span {
+  	width: 100%;
+  	// padding: 0 7% 0 0;
+  	display: inline-block;
+  	position: relative;
+  }
+  table#clist tr.zz th > span > span > input {
+  	font-size: inherit;
+	font-family: inherit;
+	/*font-weight: inherit;*/
+	width: 100%;
+	background: transparent;
+	border: none;
+	border-bottom: 1px solid rgba(0,0,0,0);
+	color: #0000FF;
+	padding-left: 7px;
+  }
+  table#clist tr.zz th > span > span:hover > input,
+  table#clist tr.zz th > span > span > input:hover,
+  table#clist tr.zz th > span > span > input:active,
+  table#clist tr.zz th > span > span > input:focus,
+  table#clist tr.zz th > span > span.active > input,
+  input.input {
+	border-bottom: 1px solid rgba(0,0,0,0.2);
+
+	/* teszt, új */
+    background: rgba(255,255,255,0.3);
+    width: 100%;
+    border-radius: 3px;
+    border: 1px solid transparent;
+    border-top: none;
+    border-bottom: 1px solid #DDD;
+    box-shadow: inset 0 1px 2px rgba(0,0,0,.39), 0 -1px 1px #FFF, 0 1px 0 #FFF;
+    outline: 0;
+    padding: 6px 6px 3px; /*padding: 8px 6px;*/
+
+    position: relative;
+    z-index: 2;
+    line-height: 1.25;
+
+  }
+
+
+
+  /* input (dropdown-os) */
+  table#clist tr.zz th > span > span > input#textFilter {
+    padding-right: 42px;
+  }
+
+
+
+  /* keresés: dropdown */
+  table#clist tr.zz th > span > span > select {
+    display: none;
+  }
+  table#clist tr.zz th > span > span:hover > select,
+  table#clist tr.zz th > span > span:active > select,
+  table#clist tr.zz th > span > span.active > select,
+  table#clist tr.zz th > span > span > input:focus+select {
+    display: block;
+    width: 35px; /*30px;*/ height: 24px;
+    position: absolute; top: 12px; right: 3px;
+    background: transparent;
+    font-family: 'DroidSans';
+    font-family: 'FontAwesome';
+    border: none; border-left: 1px solid rgba(0,0,0,0.15);
+    z-index: 2;
+  }
+
+  /* keresés input placeholder */
+  table#clist tr.zz th > span > span > input::placeholder {
+    opacity: 1;
+    color: black;
+  }
+
+  /* keresés input placeholder - aktív */
+  table#clist tr.zz th > span > span > input:focus::placeholder {
+    opacity: 1;
+    color: rgba(0,0,0,0.2);
+  }
+
+
+  table#clist tr.zz th > span > span > u {
+  	position: absolute; top: 10px; right: 5px; /*bottom: -1px; left: 5px;*/
+  	display: block;
+  	text-decoration: none;
+  	/*font-size: 0.75em;*/
+  	line-height: 16px;
+  	color: rgba(0,0,0,0.2);
+    z-index: 1;
+    font-size: 14px;
+    font-weight: normal;
+    font-family: Ubuntu;
+  }
+
+  table#clist tr.zz th > span > span > select + u {
+    right: 42px;
+  }
+
+
+
+   tr.hl {
+    background: rgba(246, 244, 72, 0.7) !important; /* rgba(255,255,0,0.2) !important;*/
+   }
+
+
+span.subinfo {
+  display: block;
+  font-size: 13px;
+  padding-left: 5px;
+  color: #555;
+
+  white-space: nowrap;
+  overflow:hidden !important;
+  text-overflow: ellipsis;
+
+}
+
+code {
+  /*display: block;
+  padding-left: 5px;*/
+  font-family: 'DroidSans', monospace;
+  font-size: 12px;
+  text-transform: uppercase;
+  /*color: #555;*/
+}
+span.subinfo i {
+  margin-right: 3px;
+}
+
+span.subinfo i.fa-barcode {
+  margin-left: 3px;
+}
+
+code s {
+  text-decoration: none;
+  width: 3px;
+  display: inline-block;
+}
+small {
+  color: #555;
+}
+
+
+

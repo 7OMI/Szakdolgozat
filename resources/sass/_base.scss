@@ -6,12 +6,8 @@
 
 /* Kijelölés tiltása */
 *:not(input):not(textarea) {
-	-webkit-user-select: none;
-	-moz-user-select: none;
-	-ms-user-select: none;
 	user-select: none;
 }
-*:not(input):not(textarea)::-moz-selection { background-color: rgba(0,0,0,0); }
 *:not(input):not(textarea)::selection { background-color: rgba(0,0,0,0); }
 
 

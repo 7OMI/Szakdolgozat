@@ -1,5 +1,228 @@
-@import '../css/normalize.css'; // Normalizálás
-@import '../css/font.css'; // Betűtípusok
-@import '../css/font-awesome.min.css'; // Ikon betűtípus
-@import '../css/base.css'; // Alap
-@import '../css/page_login.css';
+@import '../css/normalize.css';
+@import '_font';
+@import '../css/font-awesome.min.css';
+@import '_base';
+@import '_layout';
+@import '_form';
+@import '_login';
+@import '_list';
+@import '_mobile';
+@import '../css/jquery.accordion.css';
+@import '../css/jquery.sumoselect.css';
+
+
+
+// --------------------------------------
+
+
+body > main > table {
+	width: 100%;
+	margin-top: 10px;
+	margin-bottom: 5px;
+}
+
+aside span.o {
+	width: 50px; height: 50px;
+	display: block;
+	border-radius: 50px;
+	background: darkblue;
+	font-size: 30px;
+	line-height: 50px;
+	text-align: center;
+}
+
+.prodListFirstCol {
+    width: 282px;
+}
+
+/* -------------------------------------------------------------- */
+
+	/* font awesome kiegészítés: */
+
+	.fa-2_2x {
+		font-size: 2.2em
+	}
+	.fa-2_3x {
+		font-size: 2.3em
+	}
+	.fa-2_4x {
+		font-size: 2.4em
+	}
+	.fa-2_5x {
+		font-size: 2.5em
+	}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+	/* tabs */
+		.container {
+			width: 100%; height: calc(100% - 40px);
+			margin: 0 auto;
+		}
+		ul.tabs {
+			margin: 0px;
+			padding: 0px;
+			list-style: none;
+		}
+		ul.tabs li {
+			height: 40px;
+			background: none;
+			color: #222;
+			display: inline-block;
+			padding: 10px 15px;
+			line-height: 15px;
+			cursor: pointer;
+		}
+		ul.tabs li.current {
+			background: #ededed;
+			color: #222;
+		}
+
+		.tab-content {
+			height: 100%;
+		}
+
+		.tab-content > div {
+			display: none;
+			height: 100%;
+			background: #ededed;
+			padding: 15px;
+			overflow: auto;
+		}
+		.tab-content > div.current {
+			display: inherit;
+		}
+
+
+/* ¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤ */
+
+
+/* button icon, táblázat fejlécében */
+button.s.tableheader {
+	width: 33px; height: 33px;
+	line-height: 33px;
+}
+
+
+
+ /* ×××××××××××××××××××××××××××××××××××× */
+
+
+
+
+
+
+
+
+.barcode-bg {
+	height: 106px;
+	background: url('/images/barcode.png');
+	position: relative;
+}
+.barcode-bg .hole {
+	width: 80%;
+	margin: -27px 10% 10px 10%; padding: 5px 3px 3px 5px;
+	position: absolute; top: 50%;
+	background: #F2F2F2 url('/images/noise.png');
+	border: 2px solid #000;
+}
+
+.barcode-bg input[name="barcode"] {
+	text-align: center;
+	text-transform: uppercase;
+}
+
+
+
+/* --------------------- list ------------------------ */
+
+
+
+ /********************/
+ button#copy{
+    position: absolute;
+    top: 0;
+    right: 130px;
+    margin: 10px;
+ }
+ /*********************/
+
+
+
+ .tSUM{width:140px;float:left;line-height:1em;padding:5px 0px 0px 10px;}.tSUM small:first-child{color:#000;}
+
+
+
+  table#clist {
+    border-collapse: collapse;
+    margin-top: 15px;
+  }
+  tr.rowTop{
+    height: 26px;
+  }
+  tr.rowBtm {
+    height: 24px;
+  }
+  tr.rowSpc {
+    height: 5px;
+  }
+
+
+  tr.rowTop td {
+    padding-bottom: 0px !important;
+    vertical-align: bottom;
+  }
+  tr.rowTop td[rowspan] {
+    padding-bottom: 5px !important;
+  }
+  tr.rowBtm td {
+    padding-top: 1px !important;
+    vertical-align: top;
+  }
+  tr.rowPar {
+    background: rgba(173,216,230,0.2);
+  }
+
+  /*tr td:not(:first-child) {
+    padding-left: 0px !important;
+  }*/
+  /*tr td:not(:last-child) {
+    padding-right: 0px !important;
+  }*/
+
+  tr.rowTop td.prN, tr.rowTop td.qty {
+    text-align: right;
+  }
+  tr.rowBtm td.prG {
+    line-height: 0.8em;
+    text-align: right;
+    padding-right: 5px !important;
+  }
+
+
+  span.maxRes {
+    display: block;
+    position: absolute;
+    top: 2px; right: 2px;
+    font-size: 0.65em;
+    color: rgba(0,0,0,0.8);
+    font-family: 'DroidSans';
+  }
+  span.maxRes i {
+    margin-right: 2px;
+  }
+
+  // ------------------------
+
+  .auditList {
+    th {
+        text-align: left;
+    }
+    th, td {
+        padding: 3px 5px;
+        font-size: 0.85em;
+    }
+  }
+
+
+

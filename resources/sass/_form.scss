@@ -1,0 +1,255 @@
+/*
+*	FORM
+*/
+form {
+	display: inline;
+}
+
+/*
+*	INPUT, TEXTAREA, SELECT
+*/
+.input {
+	border-bottom: 1px solid rgba(0,0,0,0.2);
+	margin: 3px 5px 3px 5px;
+
+	/* teszt, új */
+	background: rgba(255,255,255,0.3);
+	border-radius: 3px;
+	border: 1px solid transparent;
+	border-top: none;
+	border-bottom: 1px solid #DDD;
+	box-shadow: inset 0 1px 2px rgba(0,0,0,.39), 0 -1px 1px #FFF, 0 1px 0 #FFF;
+
+
+	position: relative;
+	z-index: 2;
+	float: left;
+	width: calc(100% - 10px);
+
+}
+.input[data-label] {
+	margin: 22px 5px 3px 5px;
+}
+.input input, .input textarea, .input select {
+	width: 100%; height: 100%;
+	border: 0;
+	background: transparent;
+	line-height: 1.25;
+	outline: 0;
+}
+.input input, .input textarea, .input select {
+	padding: 6px 6px 3px; /*padding: 8px 6px;*/
+}
+.input input[placeholder$="ár"] {
+	width: calc(100% - 20px);
+	margin-right: 20px;
+}
+
+.input input[name^="x"][type="checkbox"] {
+	width: 16px;
+	margin: 8px 0 0 4px;
+	float: left;
+}
+.input[data-label~="Vonalkód"] input[type="text"],
+.input[data-label~="Vonalkód"] input[type="number"] {
+	width: calc(100% - 20px);
+	float: right;
+}
+
+.input select {
+	width: calc(100% - 4px); height: calc(100% - 6px);
+	margin: 2px 0; padding: 3px 6px 0px 4px;
+}
+
+.input::before {
+	width: 20px; height: 16px;
+	position: absolute; top: -17px; left: 0px;
+	display: block;
+	font-size: 0.9em;
+    font-family: 'FontAwesome';
+}
+
+.input[data-label~="Cikkszám"]::before		{ content: "\f292"; color: darkblue; font-size: 1em; }
+.input[data-label~="megnevezés"]::before	{ content: "\f0f6"; color: #da5e0f; }
+.input[data-label~="ár"]::before			{ content: "\f0d6"; color: green; font-size: 1em; top: -17px; }
+.input[data-label~="Márka"]::before			{ content: "\f1e9"; color: darkblue; }
+.input[data-label~="Gyártó"]::before		{ content: "\f0f7"; color: darkblue; }
+.input[data-label^="Forg"]::before			{ content: "\f0e8"; color: darkblue; }
+.input[data-label^="Kateg"]::before			{ content: "\f115"; color: #807e00; }
+.input[data-label~="Lista"]::before			{ content: "\f03a"; color: #810d77; }
+.input[data-label^="Megj"]::before			{ content: "\f27b"; color: blue; top: -18px; }
+
+.input[data-label~="Mennyiség"]::before		{ content: "\f009"; color: darkred; top: -17px;  }
+.input[data-label~="Db"]::before			{ content: "\f009"; color: darkred; top: -17px;  }
+.input[data-label^="Bes"]::before			{ content: "\f24a"; color: maroon; }
+
+.input[data-label~="Vonalkód"]::before		{ content: "\f02a"; color: black; top: -16px; }
+
+
+.input::after {
+	content: attr(data-label);
+	width: calc(100% - 20px); height: 16px;
+	position: absolute; top: -16px; left: 20px;
+	display: block;
+	font-weight: bolder;
+	font-size: 0.8em;
+	text-transform: uppercase;
+}
+
+.input > i {
+	position: absolute; top: 8px; left: 8px;
+}
+.input > u { /* unit */
+	width: auto; height: 100%;
+	position: absolute; top: 6px; right: 6px;
+	display: inline-block;
+	text-decoration: none;
+}
+
+.input textarea {
+	min-width: 100%; max-width: 100%;
+	min-height: 27px; height: 47px; max-height: 103px;
+}
+
+
+@media screen and (max-width: 800px) {
+
+
+	.input::after {
+		content: attr(data-label2);
+	}
+
+}
+
+
+
+
+
+.input.ghost {
+	opacity: 0.3;
+}
+.input.ghost:focus, .input.ghost:hover, .input.ghost:active {
+	opacity: 1;
+}
+
+
+
+.input.noinput{
+	background: transparent;
+	border: none;
+	margin: 0;
+	box-shadow: none;
+}
+.input.noinput::before, .input.noinput::after {
+	position: unset;
+	width: auto;
+	display: inline-block;
+	float: left;
+}
+.input.noinput::before {
+	margin-right: 5px;
+}
+
+
+.input.nomargin {
+	margin: 0;
+	width: 100%;
+}
+.input.nomargin::before, .input.nomargin::after {
+	content: unset;
+}
+
+
+input[name="xBarcode"] {
+	height: auto;
+}
+
+
+
+/*
+*	BUTTON
+*/
+
+button, a.button {
+	width: auto; height: 40px;
+	margin: 10px; padding: 0 10px;
+	background: transparent;
+	border: 1px solid transparent;
+	border-radius: 2px;
+	font-size: 16px;
+	line-height: 40px;
+	font-weight: bold;
+	text-transform: uppercase;
+	text-shadow: 1px 1px 1px rgba(255,255,255,0.9);
+	cursor: pointer;
+	color: #555;
+	display: inline-block;
+
+	text-decoration: none;
+
+	xbackground: #ccc;
+}
+button:hover, a.button:hover {
+	background-color: hsla(211,79%,6%,.03);
+	border-color: hsla(210,54%,20%,.15) hsla(210,54%,20%,.17) hsla(210,54%,20%,.2);
+}
+button:hover:active, a.button:hover:active {
+    background-image: linear-gradient(hsla(211,79%,6%,.02), hsla(211,79%,6%,.05));
+    border-color: hsla(210,54%,20%,.2) hsla(210,54%,20%,.23) hsla(210,54%,20%,.25);
+    box-shadow: 0 1px 1px hsla(211,79%,6%,.05) inset, 0 0 1px hsla(211,79%,6%,.1) inset;
+    transition-duration: 0ms;
+}
+
+button:disabled {
+	cursor: default;
+	color: rgba(0,0,0,0.3);
+}
+
+button.active, a.button.active {
+	background: rgba(0,0,0,0.1);
+	box-shadow: inset 1px 1px 1px rgba(0,0,0,0.2);
+	color: #000;
+}
+
+button > i, a.button > i {
+	font-size: 20px !important;
+	font-weight: normal !important;
+	margin: 0 5px;
+}
+
+
+button.l > i, a.button.l > i { margin: 0 5px 0 0; }
+button.lx > i, a.button.lx > i { margin: 0 5px 0 0; }
+button.r > i, a.button.r > i { margin: 0 0 0 5px; }
+button.rx > i, a.button.rx > i { margin: 0 0 0 5px; }
+
+button.l, a.button.l { position: absolute; top: 0; left: 0; }
+button.lx, a.button.lx { float: left; }
+button.r, a.button.r { position: absolute; top: 0; right: 0; }
+button.rx, a.button.rx { float: right; }
+button.p, a.button.p { width: 50px; margin: 10px 1px; text-align: center; border-radius: 100px; }
+button.s, a.button.s { width: 40px; margin: 0px 2px; text-align: center; padding: 0; margin-right: -1px;}
+
+button.p i::before, a.button.p i::before {
+	font-size: 18px;
+}
+
+
+
+.fbutton {
+	display: inline-block;
+	width: 50px; height: 40px;
+	margin: 10px 0; padding: 0 10px;
+	line-height: 40px;
+
+}
+
+
+
+
+select[name="product[brand]"] option,
+select[name="product[manufacturer]"] option,
+select[name="audit[distributor]"] option {
+	font-family: 'DroidSans';
+	font-size: 0.9em;
+}

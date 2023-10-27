@@ -1,0 +1,83 @@
+.topMenu {
+    display: none;
+    height: 60px;
+    position: fixed;
+    left: 0; right: 0; top: 0;
+    justify-content: space-around;
+    background: rgb(24 88 145 / 80%);
+
+    button {
+        color: white;
+        text-shadow: 0 0 0 rgba(0,0,0,.9);
+        font-weight: normal;
+        width: 50%;
+
+        &.tabActive {
+            background: rgba(255,255,255,.15);
+        }
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+
+    .topMenu {
+        display: flex;
+    }
+
+    .frameMain {
+        right: 0;
+        top: 60px;
+        height: calc(100vh - 60px);
+
+        &.frameHide {
+            display: none;
+        }
+
+        [data-id="prod_data"] .input {
+            width: 100% !important;
+        }
+
+        footer {
+            display: flex;
+            justify-content: space-around;
+
+            a {
+                position: static !important;
+                span {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    .frameList {
+        width: 100%;
+        top: 60px;
+        height: calc(100vh - 60px);
+
+        &.frameHide {
+            display: none;
+        }
+
+        #refresh span {
+            display: none;
+        }
+        button#copy {
+            right: 50px;
+        }
+
+        .prodListFirstCol {
+            width: 100%;
+
+            & > span {
+                width: calc(100% - 200px) !important;
+            }
+        }
+
+        #pagination button,
+        #pagination .fbutton {
+            width: 38px;
+        }
+    }
+
+  }

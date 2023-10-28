@@ -8,58 +8,52 @@ use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Validation\Rules;
 
-class UserCreate extends Command
+class UserPassword extends Command
 {
     /**
      * The name and signature of the console command.
      *
      * @var string
      */
-    protected $signature = 'user:create {email} {password} {name?}';
+    protected $signature = 'user:password {id} {password}';
 
     /**
      * The console command description.
      *
      * @var string
      */
-    protected $description = 'Felhasználó létrehozása';
+    protected $description = 'Felhasználó jelszavának megváltoztatása';
 
     /**
      * Execute the console command.
      */
     public function handle()
     {
-        $email    = $this->argument('email');
+        $id       = $this->argument('id');
         $password = $this->argument('password');
-        $name     = $this->argument('name') ?? explode('@', $email)[0] ?? null;
 
         $validator = Validator::make([
-            'name' => $name,
-            'email' => $email,
+            'id'       => $id,
             'password' => $password,
         ], [
-            'name' => ['required', 'string', 'max:255'],
-            'email' => ['required', 'string', 'lowercase', 'email', 'max:255', 'unique:'.User::class],
+            'id' => ['required', 'integer'],
             'password' => ['required', Rules\Password::defaults()],
         ]);
 
         if ($validator->fails()) {
-            $this->info('A felhasználó nem lett létrehozva. Hibák:');
+            $this->info('A felhasználó jelszava nem lett módosítva. Hibák:');
             foreach ($validator->errors()->all() as $error) {
                 $this->error($error);
             }
             return false;
         }
 
-        $user = User::create([
-            'name' => $name,
-            'email' => $email,
+        $user = User::whereId($id)->update([
             'password' => Hash::make($password),
         ]);
 
         if ($user) {
-            $this->info('A felhasználó sikeresen létrehozva.');
+            $this->info('A felhasználó jelszava sikeresen módosítva.');
         }
-
     }
 }

@@ -1,4 +1,14 @@
 {
     "/js/app.js": "/js/app.js",
     "/css/app.css": "/css/app.css",
+    "/js/lib/jquery.js": "/js/lib/jquery.js",
+    "/js/plugin/jquery.accordion.min.js": "/js/plugin/jquery.accordion.min.js",
+    "/js/plugin/jquery.auto-complete.js": "/js/plugin/jquery.auto-complete.js",
+    "/js/plugin/jquery.sumoselect.min.js": "/js/plugin/jquery.sumoselect.min.js",
+    "/fonts/droidsansmono/DroidSansMono-webfont.woff": "/fonts/droidsansmono/DroidSansMono-webfont.woff",
+    "/fonts/fontawesome/fontawesome-webfont.svg": "/fonts/fontawesome/fontawesome-webfont.svg",
+    "/fonts/fontawesome/fontawesome-webfont.woff": "/fonts/fontawesome/fontawesome-webfont.woff",
+    "/fonts/fontawesome/fontawesome-webfont.woff2": "/fonts/fontawesome/fontawesome-webfont.woff2",
+    "/fonts/ubuntu/ubuntu-r-webfont.woff": "/fonts/ubuntu/ubuntu-r-webfont.woff",
+    "/fonts/ubuntu/ubuntu-r-webfont.woff2": "/fonts/ubuntu/ubuntu-r-webfont.woff2"
 }

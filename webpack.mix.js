@@ -16,6 +16,12 @@ mix
         processCssUrls: false
     })
     .js('resources/js/app.js', 'public/js')
-    .sass('resources/sass/app.scss', 'public/css')
+    .sass('resources/sass/app.scss', 'public/css', {
+        sassOptions: {
+            outputStyle: 'compressed'
+        }
+    })
+    .copy('resources/js/lib/', 'public/js/lib/', false)
+    .copy('resources/js/plugin/', 'public/js/plugin/', false)
     .copy('resources/fonts/', 'public/fonts/', false)
 ;

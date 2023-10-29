@@ -18,4 +18,10 @@ class ProductCategory extends Model
     // Típuskonverzió
     protected $casts = [
     ];
+
+    // Tábla kapcsolatok (egy-egy)
+    public function category()
+    {
+        return $this->belongsTo(Category::class);
+    }
 }

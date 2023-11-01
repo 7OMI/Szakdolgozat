@@ -39,6 +39,10 @@ Route::group(['middleware' => ['auth', 'verified']], function() {
         Route::get ('/audit/{id}/delete', 'destroy')->name('audit.delete');
     });
 
+    Route::group(['controller' => ExportController::class], function() {
+        Route::get ('/export/{type}', 'index')->name('export');
+    });
+
 });
 
 /*
